@@ -42,9 +42,9 @@ local body = ssl_vpn_es.search_body {
     gte = { t = "time", v = "-24h" },
     lte = { t = "time", v = "now" },
 }
--- 新建搜索
+-- 新建搜索，参数1：搜索类型，bool和agg，对应es的bool查询和agg聚合查询。参数2：请求body，如上。
 local search = ssl_vpn_es.new_search("agg", body)
--- 结果存储至文件。search实现了input的接口，调用方法同kafka consumer
+-- 结果存储至文件。search实现了input的接口，调用方法参考后续说明。
 search.file("resource/res.json")
 ```
 
