@@ -59,7 +59,7 @@ local vis = ssl_vpn_es.new_vis()
 --vis.pie(search, "count", "各域名请求数占比")
 vis.line(search1, 3, "count", "各域名请求数24h趋势图", "时间", "请求数")
 vis.bar(search, 3, "count", "各域名请求数24h趋势图", "时间", "请求数")
-vis.page("resource/waf_access/20210901-股吧.html")
+vis.page("resource/waf_access/20210901-log.html")
 ```
 
 resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的时候，会根据search_body的配置，替换掉其中的值。如上述配置中，源文本的%date_field%会被替换为@timestamp，%gte%和%lte%会被替换为对应的时间，从而生成一个可供ES查询的正确请求body。正确的请求body可参考elasticsearch官方文档，也可通过kibana搜索，查看http请求的包
