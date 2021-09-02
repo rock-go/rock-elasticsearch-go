@@ -6,6 +6,7 @@ import (
 	"github.com/rock-go/rock/logger"
 	"github.com/rock-go/rock/lua"
 	"io"
+	"io/ioutil"
 	"os"
 	"time"
 )
@@ -20,6 +21,7 @@ type Search struct {
 	body   interface{}
 	typ    string
 	buffer chan []byte
+
 	tk     *time.Ticker // 当buffer已满时，定期轮询，防止阻塞
 	ctx    context.Context
 	cancel context.CancelFunc
@@ -87,6 +89,8 @@ func (s *Search) handleRes(res *es.SearchResult) {
 				logger.Errorf("marshal source to json error: %v", err)
 				return
 			}
+			//todo
+			aggData, _ = ioutil.ReadFile("resource/waf_access/result_for_bar_or_line_multi.json")
 			s.buffer <- aggData
 		}
 	default:

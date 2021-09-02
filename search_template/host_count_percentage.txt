@@ -1,0 +1,38 @@
+{
+	"size": 0,
+	"_source": {
+		"excludes": []
+	},
+	"aggs": {
+		"2": {
+			"terms": {
+				"field": "@timestamp",
+				"size": 5,
+				"order": {
+					"_count": "desc"
+				}
+			}
+		}
+	},
+	"stored_fields": ["*"],
+	"script_fields": {},
+	"docvalue_fields": ["@timestamp", "time_created", "timestamp"],
+	"query": {
+		"bool": {
+			"must": [{
+				"match_all": {}
+			}, {
+				"range": {
+					"@timestamp": {
+						"gte": %gte%,
+						"lte": %lte%,
+						"format": "epoch_millis"
+					}
+				}
+			}],
+			"filter": [],
+			"should": [],
+			"must_not": []
+		}
+	}
+}

@@ -1,0 +1,628 @@
+{
+  "buckets": [
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 1,
+        "buckets": [
+          {
+            "1": {
+              "value": 136281050
+            },
+            "key": "x1.domain.com",
+            "doc_count": 31983
+          },
+          {
+            "1": {
+              "value": 31778785
+            },
+            "key": "x3.domain.com",
+            "doc_count": 408
+          },
+          {
+            "1": {
+              "value": 20060620
+            },
+            "key": "x2.domain.com",
+            "doc_count": 4281
+          },
+          {
+            "1": {
+              "value": 133724
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 29
+          },
+          {
+            "1": {
+              "value": 6674
+            },
+            "key": "gb.domain.com",
+            "doc_count": 47
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:47:00.000+08:00",
+      "key": 1630399620000,
+      "doc_count": 36749
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 11,
+        "buckets": [
+          {
+            "1": {
+              "value": 1071190890
+            },
+            "key": "x1.domain.com",
+            "doc_count": 233212
+          },
+          {
+            "1": {
+              "value": 270854743
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3489
+          },
+          {
+            "1": {
+              "value": 150602518
+            },
+            "key": "x2.domain.com",
+            "doc_count": 32609
+          },
+          {
+            "1": {
+              "value": 901956
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 157
+          },
+          {
+            "1": {
+              "value": 66030
+            },
+            "key": "gb.domain.com",
+            "doc_count": 465
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:48:00.000+08:00",
+      "key": 1630399680000,
+      "doc_count": 269943
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 18,
+        "buckets": [
+          {
+            "1": {
+              "value": 1045137008
+            },
+            "key": "x1.domain.com",
+            "doc_count": 237108
+          },
+          {
+            "1": {
+              "value": 248166531
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3240
+          },
+          {
+            "1": {
+              "value": 158578408
+            },
+            "key": "x2.domain.com",
+            "doc_count": 28323
+          },
+          {
+            "1": {
+              "value": 1270670
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 239
+          },
+          {
+            "1": {
+              "value": 69154
+            },
+            "key": "gb.domain.com",
+            "doc_count": 487
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:49:00.000+08:00",
+      "key": 1630399740000,
+      "doc_count": 269415
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 26,
+        "buckets": [
+          {
+            "1": {
+              "value": 1025211380
+            },
+            "key": "x1.domain.com",
+            "doc_count": 224042
+          },
+          {
+            "1": {
+              "value": 224585797
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3192
+          },
+          {
+            "1": {
+              "value": 137862692
+            },
+            "key": "x2.domain.com",
+            "doc_count": 26983
+          },
+          {
+            "1": {
+              "value": 911076
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 201
+          },
+          {
+            "1": {
+              "value": 47712
+            },
+            "key": "gb.domain.com",
+            "doc_count": 336
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:50:00.000+08:00",
+      "key": 1630399800000,
+      "doc_count": 254780
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 17,
+        "buckets": [
+          {
+            "1": {
+              "value": 1176813048
+            },
+            "key": "x1.domain.com",
+            "doc_count": 241850
+          },
+          {
+            "1": {
+              "value": 251813364
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3458
+          },
+          {
+            "1": {
+              "value": 153311417
+            },
+            "key": "x2.domain.com",
+            "doc_count": 33147
+          },
+          {
+            "1": {
+              "value": 1211996
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 239
+          },
+          {
+            "1": {
+              "value": 57084
+            },
+            "key": "gb.domain.com",
+            "doc_count": 402
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:51:00.000+08:00",
+      "key": 1630399860000,
+      "doc_count": 279113
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 17,
+        "buckets": [
+          {
+            "1": {
+              "value": 1114466496
+            },
+            "key": "x1.domain.com",
+            "doc_count": 242718
+          },
+          {
+            "1": {
+              "value": 231137081
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3207
+          },
+          {
+            "1": {
+              "value": 157455892
+            },
+            "key": "x2.domain.com",
+            "doc_count": 32874
+          },
+          {
+            "1": {
+              "value": 1178554
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 184
+          },
+          {
+            "1": {
+              "value": 56658
+            },
+            "key": "gb.domain.com",
+            "doc_count": 399
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:52:00.000+08:00",
+      "key": 1630399920000,
+      "doc_count": 279399
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 20,
+        "buckets": [
+          {
+            "1": {
+              "value": 1239402414
+            },
+            "key": "x1.domain.com",
+            "doc_count": 255787
+          },
+          {
+            "1": {
+              "value": 255179157
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3403
+          },
+          {
+            "1": {
+              "value": 141417583
+            },
+            "key": "x2.domain.com",
+            "doc_count": 32393
+          },
+          {
+            "1": {
+              "value": 1106749
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 229
+          },
+          {
+            "1": {
+              "value": 64326
+            },
+            "key": "gb.domain.com",
+            "doc_count": 453
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:53:00.000+08:00",
+      "key": 1630399980000,
+      "doc_count": 292285
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 23,
+        "buckets": [
+          {
+            "1": {
+              "value": 1117128058
+            },
+            "key": "x1.domain.com",
+            "doc_count": 235358
+          },
+          {
+            "1": {
+              "value": 241230974
+            },
+            "key": "x3.domain.com",
+            "doc_count": 2941
+          },
+          {
+            "1": {
+              "value": 140215435
+            },
+            "key": "x2.domain.com",
+            "doc_count": 32456
+          },
+          {
+            "1": {
+              "value": 1376950
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 257
+          },
+          {
+            "1": {
+              "value": 86052
+            },
+            "key": "gb.domain.com",
+            "doc_count": 606
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:54:00.000+08:00",
+      "key": 1630400040000,
+      "doc_count": 271641
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 35,
+        "buckets": [
+          {
+            "1": {
+              "value": 1026145079
+            },
+            "key": "x1.domain.com",
+            "doc_count": 230561
+          },
+          {
+            "1": {
+              "value": 263444069
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3433
+          },
+          {
+            "1": {
+              "value": 143195658
+            },
+            "key": "x2.domain.com",
+            "doc_count": 31402
+          },
+          {
+            "1": {
+              "value": 1008449
+            },
+            "key": "x2topic.domain.com",
+            "doc_count": 198
+          },
+          {
+            "1": {
+              "value": 75544
+            },
+            "key": "gb.domain.com",
+            "doc_count": 532
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:55:00.000+08:00",
+      "key": 1630400100000,
+      "doc_count": 266161
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 1,
+        "buckets": [
+          {
+            "1": {
+              "value": 663316067
+            },
+            "key": "x1.domain.com",
+            "doc_count": 156938
+          },
+          {
+            "1": {
+              "value": 229808100
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3550
+          },
+          {
+            "1": {
+              "value": 294524
+            },
+            "key": "x1-test.domain.com",
+            "doc_count": 124
+          },
+          {
+            "1": {
+              "value": 56374
+            },
+            "key": "gb.domain.com",
+            "doc_count": 397
+          },
+          {
+            "1": {
+              "value": 37222
+            },
+            "key": "x2.domain.com",
+            "doc_count": 15
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:56:00.000+08:00",
+      "key": 1630400160000,
+      "doc_count": 161025
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "1": {
+              "value": 247110759
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3453
+          },
+          {
+            "1": {
+              "value": 53915534
+            },
+            "key": "x1.domain.com",
+            "doc_count": 13138
+          },
+          {
+            "1": {
+              "value": 43242
+            },
+            "key": "x1-test.domain.com",
+            "doc_count": 55
+          },
+          {
+            "1": {
+              "value": 3692
+            },
+            "key": "gb.domain.com",
+            "doc_count": 26
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:57:00.000+08:00",
+      "key": 1630400220000,
+      "doc_count": 16672
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "1": {
+              "value": 288622602
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3461
+          },
+          {
+            "1": {
+              "value": 16298
+            },
+            "key": "x1-test.domain.com",
+            "doc_count": 31
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:58:00.000+08:00",
+      "key": 1630400280000,
+      "doc_count": 3492
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "1": {
+              "value": 255662151
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3365
+          },
+          {
+            "1": {
+              "value": 4252
+            },
+            "key": "x1-test.domain.com",
+            "doc_count": 19
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T16:59:00.000+08:00",
+      "key": 1630400340000,
+      "doc_count": 3384
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "1": {
+              "value": 223756580
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3110
+          },
+          {
+            "1": {
+              "value": 75682
+            },
+            "key": "x1-test.domain.com",
+            "doc_count": 56
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T17:00:00.000+08:00",
+      "key": 1630400400000,
+      "doc_count": 3166
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "1": {
+              "value": 236835624
+            },
+            "key": "x3.domain.com",
+            "doc_count": 3173
+          },
+          {
+            "1": {
+              "value": 6822
+            },
+            "key": "x1-test.domain.com",
+            "doc_count": 23
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T17:01:00.000+08:00",
+      "key": 1630400460000,
+      "doc_count": 3196
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "1": {
+              "value": 215855795
+            },
+            "key": "x3.domain.com",
+            "doc_count": 2893
+          },
+          {
+            "1": {
+              "value": 5563
+            },
+            "key": "x1-test.domain.com",
+            "doc_count": 8
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T17:02:00.000+08:00",
+      "key": 1630400520000,
+      "doc_count": 2901
+    }
+  ]
+}

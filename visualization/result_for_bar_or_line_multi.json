@@ -1,0 +1,476 @@
+{
+  "buckets": [
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 16259
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 4057
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 193
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 51
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 10
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:19:00.000+08:00",
+      "key": 1630,
+      "doc_count": 20570
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 68137
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 13307
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 838
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 199
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 35
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:20:00.000+08:00",
+      "key": 1630351200000,
+      "doc_count": 82516
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 76417
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 16450
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 965
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 345
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 25
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:21:00.000+08:00",
+      "key": 1630351260000,
+      "doc_count": 94207
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 75609
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 17098
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 1115
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 211
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 49
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:22:00.000+08:00",
+      "key": 1630351320000,
+      "doc_count": 94087
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 78245
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 16227
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 952
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 230
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 24
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:23:00.000+08:00",
+      "key": 1630351380000,
+      "doc_count": 95683
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 75124
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 13438
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 933
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 186
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 33
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:24:00.000+08:00",
+      "key": 1630351440000,
+      "doc_count": 89719
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 65564
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 16305
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 1110
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 342
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 36
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:25:00.000+08:00",
+      "key": 1630351500000,
+      "doc_count": 83362
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 69230
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 16208
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 886
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 159
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 20
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:26:00.000+08:00",
+      "key": 1630351560000,
+      "doc_count": 86508
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 55590
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 14940
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 903
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 178
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 35
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:27:00.000+08:00",
+      "key": 1630351620000,
+      "doc_count": 71651
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 57755
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 16392
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 800
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 94
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 36
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:28:00.000+08:00",
+      "key": 1630351680000,
+      "doc_count": 75082
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 57991
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 17950
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 870
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 325
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 33
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:29:00.000+08:00",
+      "key": 1630351740000,
+      "doc_count": 77174
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 60932
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 17362
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 728
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 209
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 44
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:30:00.000+08:00",
+      "key": 1630351800000,
+      "doc_count": 79280
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 5,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 61685
+          },
+          {
+            "key": "mx1.domain.com",
+            "doc_count": 9466
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 963
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 170
+          },
+          {
+            "key": "x5.domain.com",
+            "doc_count": 19
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:31:00.000+08:00",
+      "key": 1630351860000,
+      "doc_count": 72308
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 62762
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 891
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 265
+          },
+          {
+            "key": "guba-test.domain.com",
+            "doc_count": 4
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:32:00.000+08:00",
+      "key": 1630351920000,
+      "doc_count": 63922
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "x1.domain.com",
+            "doc_count": 35573
+          },
+          {
+            "key": "x3.domain.com",
+            "doc_count": 852
+          },
+          {
+            "key": "x4.domain.com",
+            "doc_count": 66
+          },
+          {
+            "key": "guba-test.domain.com",
+            "doc_count": 3
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:33:00.000+08:00",
+      "key": 1630351980000,
+      "doc_count": 36494
+    },
+    {
+      "3": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "x3.domain.com",
+            "doc_count": 325
+          }
+        ]
+      },
+      "key_as_string": "2021-08-31T03:34:00.000+08:00",
+      "key": 1630352040000,
+      "doc_count": 325
+    }
+  ]
+}

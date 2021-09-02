@@ -104,5 +104,6 @@ func formatTime(t string) int64 {
 		logger.Errorf("parse time format [%s] error: %v", t, err)
 		return time.Now().Unix() * 1000
 	}
+
 	return ti.Unix() * 1000
 }

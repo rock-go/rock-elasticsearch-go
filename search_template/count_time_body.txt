@@ -1,0 +1,60 @@
+{
+  "size": 0,
+  "_source": {
+    "excludes": []
+  },
+  "aggs": {
+    "2": {
+      "date_histogram": {
+        "field": "@timestamp",
+        "interval": "30s",
+        "time_zone": "Asia/Shanghai",
+        "min_doc_count": 1
+      },
+      "aggs": {
+        "1": {
+          "sum": {
+            "field": "facility"
+          }
+        }
+      }
+    }
+  },
+  "stored_fields": [
+    "*"
+  ],
+  "script_fields": {},
+  "docvalue_fields": [
+    "@timestamp",
+    "time_created",
+    "timestamp"
+  ],
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match_all": {}
+        },
+        {
+          "range": {
+            "@timestamp": {
+              "gte": %gte%,
+              "lte": %lte%,
+              "format": "epoch_millis"
+            }
+          }
+        },
+        {
+          "match_phrase": {
+            "severity": {
+              "query": 4
+            }
+          }
+        }
+      ],
+      "filter": [],
+      "should": [],
+      "must_not": []
+    }
+  }
+}

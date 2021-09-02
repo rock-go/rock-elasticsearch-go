@@ -1,0 +1,34 @@
+{
+  "doc_count_error_upper_bound": 0,
+  "sum_other_doc_count": 0,
+  "buckets": [
+    {
+      "key": "x1.domain.com",
+      "doc_count": 231412470
+    },
+    {
+      "key": "x2.domain.com",
+      "doc_count": 29886354
+    },
+    {
+      "key": "x3.domain.com",
+      "doc_count": 3971891
+    },
+    {
+      "key": "x4.domain.com",
+      "doc_count": 506776
+    },
+    {
+      "key": "x5.domain.com",
+      "doc_count": 304999
+    },
+    {
+      "key": "x6.domain.com",
+      "doc_count": 10488
+    },
+    {
+      "key": "x7.domain.com",
+      "doc_count": 11
+    }
+  ]
+}

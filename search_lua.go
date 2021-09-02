@@ -12,7 +12,7 @@ func (s *Search) LClose(L *lua.LState) int {
 	return 0
 }
 
-func (s Search) LFile(L *lua.LState) int {
+func (s *Search) LFile(L *lua.LState) int {
 	path := L.CheckString(1)
 	go s.File(path)
 	return 0
@@ -28,5 +28,6 @@ func (s *Search) Index(L *lua.LState, key string) lua.LValue {
 	if key == "file" {
 		return L.NewFunction(s.LFile)
 	}
+
 	return lua.LNil
 }

@@ -1,0 +1,50 @@
+{
+   "aggs": {
+     "2": {
+       "terms": {
+         "field": "host.keyword",
+         "order": {
+           "_count": "desc"
+         },
+         "size": 50
+       }
+     }
+   },
+   "size": 0,
+   "_source": {
+     "excludes": []
+   },
+   "stored_fields": [
+     "*"
+   ],
+   "script_fields": {},
+   "docvalue_fields": [
+     {
+       "field": "@timestamp",
+       "format": "date_time"
+     }
+   ],
+   "query": {
+     "bool": {
+       "must": [
+         {
+           "range": {
+             "@timestamp": {
+               "format": "epoch_millis",
+               "gte": %gte%,
+               "lte": %lte%"
+             }
+           }
+         }
+       ],
+       "filter": [
+         {
+           "match_all": {}
+         }
+       ],
+       "should": [],
+       "must_not": []
+     }
+   },
+   "timeout": "30000ms"
+}

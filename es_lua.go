@@ -1,6 +1,7 @@
 package elasticsearch
 
 import (
+	"github.com/go-echarts/go-echarts/v2/components"
 	"github.com/rock-go/rock/lua"
 	"strings"
 )
@@ -53,6 +54,12 @@ func (e *ES) LNewSearch(L *lua.LState) int {
 	return 1
 }
 
+func (e *ES) LNewVisualization(L *lua.LState) int {
+	vis := Chart{charts: make([]components.Charter, 0)}
+	L.Push(&lua.LightUserData{Value: &vis})
+	return 1
+}
+
 func (e *ES) Index(L *lua.LState, key string) lua.LValue {
 	if key == "start" {
 		return lua.NewFunction(e.start)
@@ -68,6 +75,9 @@ func (e *ES) Index(L *lua.LState, key string) lua.LValue {
 	}
 	if key == "new_search" {
 		return lua.NewFunction(e.LNewSearch)
+	}
+	if key == "new_vis" {
+		return lua.NewFunction(e.LNewVisualization)
 	}
 	return lua.LNil
 }

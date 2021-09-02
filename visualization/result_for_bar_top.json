@@ -1,0 +1,41 @@
+{
+  "doc_count_error_upper_bound": 0,
+  "sum_other_doc_count": 86,
+  "buckets": [
+    {
+      "1": {
+        "value": 9837590330
+      },
+      "key": "x1.domain.com",
+      "doc_count": 1890086
+    },
+    {
+      "1": {
+        "value": 3929177772
+      },
+      "key": "x2.domain.com",
+      "doc_count": 54438
+    },
+    {
+      "1": {
+        "value": 1311401547
+      },
+      "key": "x3.domain.com",
+      "doc_count": 224037
+    },
+    {
+      "1": {
+        "value": 11322084
+      },
+      "key": "x4.domain.com",
+      "doc_count": 1968
+    },
+    {
+      "1": {
+        "value": 683446
+      },
+      "key": "x5.domain.com",
+      "doc_count": 4813
+    }
+  ]
+}
