@@ -379,6 +379,12 @@ resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的�
 - 参数6：y轴显示名称
 - 返回结果：图表对象，存储到golang channel中
 
+###### 绘图
+
+- 函数名：.page("resource/log_access/20210901.html")
+- 调用对象：图标处理对象vis
+- 参数：结果存储路径
+
 ### 其它模块调用
 
 rock-elasticsearch-go模块实现了Input接口，该接口返回了模块缓存搜索结果的通道，其它模块调用时，从该通道读取数据并处理搜索结果。
