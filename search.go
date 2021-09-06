@@ -6,7 +6,6 @@ import (
 	"github.com/rock-go/rock/logger"
 	"github.com/rock-go/rock/lua"
 	"io"
-	"io/ioutil"
 	"os"
 	"time"
 )
@@ -89,8 +88,8 @@ func (s *Search) handleRes(res *es.SearchResult) {
 				logger.Errorf("marshal source to json error: %v", err)
 				return
 			}
-			//todo
-			aggData, _ = ioutil.ReadFile("resource/waf_access/result_for_bar_or_line_multi.json")
+			//todo, debug
+			//aggData, _ = ioutil.ReadFile("resource/waf_access/domain_timeline_count_for_line.json")
 			s.buffer <- aggData
 		}
 	default:
