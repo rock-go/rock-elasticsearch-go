@@ -28,41 +28,43 @@ rock.Inject(xcall.Rock, elasticsearch.LuaInjectApi)
 
 ```lua
 -- 配置连接es服务器
-ssl_vpn_es = rock.es {
+local log_es = rock.es {
     name = "config_es_search",
-    addr = "http://172.16.88.58:9200/",
+    addr = "http://172.xx.xx.58:9200/",
     user = "",
     password = "",
-    index = "ssl*",
+    index = "access*",
     buffer = 4096
 }
-proc.start(ssl_vpn_es)
+proc.start(log_es)
 
-local body = ssl_vpn_es.search_body {
+local body = log_es.search_body {
     source = "resource/access_log/host_count_percentage.txt",
-    date_field = { t = "string", v = "@timestamp" },
+    date_field = { t = "string", v = "host" },
     gte = { t = "time", v = "-1h" },
     lte = { t = "time", v = "now" },
 }
 
 -- 下列步骤可定时运行
-local search = ssl_vpn_es.new_search("agg", body)
+local search = log_es.new_search("agg", body)
+
+-- 结果存入文件
 --local now = "20210828"
 --res = "resource/res-" .. now .. ".json"
--- 结果存入文件
 --search.file(res)
 
-local search1 = ssl_vpn_es.new_search("agg", body)
---local search2 = ssl_vpn_es.new_search("agg", body)
+local search1 = log_es.new_search("agg", body)
+local search2 = log_es.new_search("agg", body)
 
-local vis = ssl_vpn_es.new_vis()
+local vis = log_es.new_vis()
 --vis.pie(search, "count", "各域名请求数占比")
 vis.line(search1, 3, "count", "各域名请求数24h趋势图", "时间", "请求数")
 vis.bar(search, 3, "count", "各域名请求数24h趋势图", "时间", "请求数")
-vis.page("resource/waf_access/20210901-log.html")
+vis.geo(search2, "world", "count", "访问来源地理位置分布", "resource/IP_trial_single_WGS84.awdb")
+vis.page("resource/waf_access/20210901-log.html") -- 每次调用，在指定路径html页面内绘制前面的图
 ```
 
-resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的时候，会根据search_body的配置，替换掉其中的值。如上述配置中，源文本的%date_field%会被替换为@timestamp，%gte%和%lte%会被替换为对应的时间，从而生成一个可供ES查询的正确请求body。正确的请求body可参考elasticsearch官方文档，也可通过kibana搜索，查看http请求的包
+resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的时候，会根据search_body的配置，替换掉其中的值。如上述配置中，源文本的%date_field%会被替换为@timestamp，%gte%和%lte%会被替换为对应的时间，从而生成一个可供ES查询的正确请求body。正确的请求body可参考elasticsearch官方文档，也可通过kibana搜索，查看http请求的包。模版可以通过kibana的dev tools测试正确性。
 
 ```text
 {
@@ -313,6 +315,13 @@ resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的�
 
 #### 参数说明
 
+从连接es到画图或存储到文件共分四个步骤：
+
+1. 连接ES：golang中生成一个es连接客户端；
+2. 创建body：根据模版和设置，生成一个es可以直接请求的search body；
+3. 搜索：搜索数据，缓存到Search对象的golang中，每调用一次，会创建一个新的Search对象；数据消费完毕会被回收；
+4. 结果处理：从Search对象的通道中，读取搜索结果，存储到文件或绘图，由于结果缓存到通道，每次搜索结果只能被处理一次。
+
 ##### 连接ES
 
 - name: 模块名称，用于日志标识和其他服务调用
@@ -357,7 +366,7 @@ resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的�
 
 ###### 直方图
 
-- 函数名：.bar(search, 2, "count", "tile", "x name", "y name")
+- 函数名：.bar(search, 2, "count", "title", "x name", "y name")
 - 调用对象：图表处理对象vis
 - 参数1：搜索对象
 - 参数2：图表类型。2 基础类型，一个x轴坐标点对应一个类型的数据；3 聚合类型，一个x轴坐标点对应多个类型的数据
@@ -369,7 +378,7 @@ resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的�
 
 ###### 折线图
 
-- 函数名：.line(search, 2, "count", "tile", "x name", "y name")
+- 函数名：.line(search, 2, "count", "title", "x name", "y name")
 - 调用对象：图表处理对象vis
 - 参数1：搜索对象
 - 参数2：图表类型。2 基础类型，一个x轴坐标点对应一个类型的数据；3 聚合类型，一个x轴坐标点对应多个类型的数据
@@ -379,15 +388,27 @@ resource/count_time_body.txt中的内容，其中%xxx%为占位符，搜索的�
 - 参数6：y轴显示名称
 - 返回结果：图表对象，存储到golang channel中
 
+###### 地图
+
+- 函数名：.geo(search, "world", "count", "title", dbPath)
+- 调用对象：图表处理对象vis
+- 参数1：搜索对象
+- 参数2：图表类型。world 世界地图; china 中国地图
+- 参数3：取值类型，count 统计的值为文档个数，value 统计的值为文档某字段的值（求和，平均等） 
+- 参数4：图表标题
+- 参数5：IP地址坐标解析地址库，采用的是埃文科技的离线地址库
+- 返回结果：图表对象，存储到golang channel中
+
 ###### 绘图
 
 - 函数名：.page("resource/log_access/20210901.html")
 - 调用对象：图标处理对象vis
 - 参数：结果存储路径
+- 返回结果：从通道读取图表对象，并写入到指定的HTML页面中
 
 ### 其它模块调用
 
-rock-elasticsearch-go模块实现了Input接口，该接口返回了模块缓存搜索结果的通道，其它模块调用时，从该通道读取数据并处理搜索结果。
+​		rock-elasticsearch-go模块实现了Input接口，该接口返回了模块缓存搜索结果的通道，其它模块调用时，从该通道读取数据并处理搜索结果。下面示例为获取搜索结果，绘图直接调用其绘图接口，一次搜索只能绘制一张图。
 
 ```go
 // example
