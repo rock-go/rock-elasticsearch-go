@@ -2,7 +2,7 @@ package elasticsearch
 
 import (
 	"context"
-	es "github.com/olivere/elastic/v6"
+	es "github.com/olivere/elastic/v7"
 	"github.com/rock-go/rock/lua"
 	"reflect"
 )
@@ -10,6 +10,7 @@ import (
 var ELASTIC = reflect.TypeOf((*ES)(nil)).String()
 
 type config struct {
+	version  int
 	name     string
 	addr     []string
 	user     string

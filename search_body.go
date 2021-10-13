@@ -59,6 +59,7 @@ func (b *Body) String() string {
 	body = string(bodyBytes)
 	for k, v := range b.fields {
 		k = "%" + k + "%"
+		// 替换模版请求txt中的%field%
 		body = replace(body, k, v)
 	}
 

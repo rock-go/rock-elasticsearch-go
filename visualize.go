@@ -25,7 +25,6 @@ const (
 )
 
 type Chart struct {
-	lua.NoReflect
 	lua.Super
 	charts []components.Charter
 }
@@ -141,15 +140,27 @@ func parseData2Pie(res []byte, dimension, title string) *charts.Pie {
 
 	pie := charts.NewPie()
 	pie.SetGlobalOptions(
+		charts.WithInitializationOpts(opts.Initialization{
+			PageTitle: title,
+			Theme:     types.ThemeShine,
+			Width:     "100%",
+			Height:    "100vh",
+		}),
 		charts.WithTitleOpts(opts.Title{Title: title, Left: "center"}),
 		charts.WithTooltipOpts(opts.Tooltip{Show: true}),
+		charts.WithLegendOpts(opts.Legend{
+			Show:   true,
+			Orient: "vertical",
+			X:      "left",
+			Top:    "center",
+		}),
 	)
 
 	pie.AddSeries(title, pieData).
 		SetSeriesOptions(charts.WithLabelOpts(
 			opts.Label{
 				Show:      true,
-				Formatter: "{b}: {c}",
+				Formatter: "{b}: {d}%",
 			}),
 		)
 
@@ -375,6 +386,11 @@ func generateSubAggBarItems(res []byte, dimension string, title, x, y string) *c
 // bar设置参数
 func setBar(bar *charts.Bar, title, x, y string) *charts.Bar {
 	bar.SetGlobalOptions(
+		charts.WithInitializationOpts(opts.Initialization{
+			Theme:  types.ThemeShine,
+			Width:  "100%",
+			Height: "100vh",
+		}),
 		charts.WithTitleOpts(opts.Title{Title: title, Left: "center"}),
 		charts.WithTooltipOpts(opts.Tooltip{Show: true}),
 		charts.WithLegendOpts(opts.Legend{Right: "80%"}),
@@ -450,7 +466,15 @@ func generateSubAggLineItems(res []byte, dimension, title, x, y string) *charts.
 		for k, item := range data {
 			items[k] = opts.LineData{Value: item}
 		}
-		line.AddSeries(cate, items)
+		line.AddSeries(cate, items).
+			SetSeriesOptions(charts.WithEmphasisOpts(opts.Emphasis{
+				Label: &opts.Label{
+					Show:      true,
+					Color:     "",
+					Position:  "",
+					Formatter: "{b}  {c}",
+				},
+			}))
 	}
 
 	return line
@@ -459,16 +483,26 @@ func generateSubAggLineItems(res []byte, dimension, title, x, y string) *charts.
 // 样式修改
 func setLine(line *charts.Line, title, x, y string) *charts.Line {
 	line.SetGlobalOptions(
+		charts.WithInitializationOpts(opts.Initialization{
+			Width:  "100%",
+			Height: "100vh",
+			Theme:  types.ThemeShine,
+		}),
 		charts.WithTitleOpts(opts.Title{
 			Title: title,
 			Left:  "center",
 		}),
-		charts.WithInitializationOpts(opts.Initialization{
-			Theme: "shine",
-		}),
 		charts.WithXAxisOpts(opts.XAxis{Name: x}),
 		charts.WithYAxisOpts(opts.YAxis{Name: y}),
 		charts.WithTooltipOpts(opts.Tooltip{Show: true}),
+		charts.WithLegendOpts(opts.Legend{
+			Show: true,
+			//Left:         "10px",
+			Orient:       "vertical",
+			X:            "right",
+			SelectedMode: "multiple",
+			Align:        "right",
+		}),
 	)
 
 	return line

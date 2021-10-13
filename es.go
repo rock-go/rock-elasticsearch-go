@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	es "github.com/olivere/elastic/v6"
+	es7 "github.com/olivere/elastic/v7"
 	"github.com/rock-go/rock/logger"
 	"github.com/rock-go/rock/lua"
 	"time"
@@ -19,9 +19,9 @@ func newEs(cfg *config) *ES {
 
 func (e *ES) Conn() error {
 	var err error
-	e.client, err = es.NewClient(
-		es.SetBasicAuth(e.cfg.user, e.cfg.password),
-		es.SetURL(e.cfg.addr...),
+	e.client, err = es7.NewClient(
+		es7.SetBasicAuth(e.cfg.user, e.cfg.password),
+		es7.SetURL(e.cfg.addr...),
 	)
 
 	return err
@@ -51,8 +51,8 @@ func (e *ES) Close() error {
 // NewSearch 新建查询
 func (e *ES) NewSearch(typ string, b *Body) (*Search, error) {
 	if e.S == lua.CLOSE {
-		logger.Errorf("es module's status is close, search exit")
-		return nil, errors.New("es status is close")
+		logger.Errorf("es7 module's status is close, search exit")
+		return nil, errors.New("es7 status is close")
 	}
 
 	body := b.String()

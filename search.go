@@ -2,7 +2,7 @@ package elasticsearch
 
 import (
 	"context"
-	es "github.com/olivere/elastic/v6"
+	es "github.com/olivere/elastic/v7"
 	"github.com/rock-go/rock/logger"
 	"github.com/rock-go/rock/lua"
 	"io"
@@ -12,7 +12,6 @@ import (
 
 // Search 搜索结果，缓存在buffer内
 type Search struct {
-	lua.NoReflect
 	lua.Super
 
 	client *es.Client
@@ -52,7 +51,7 @@ func (s *Search) Start() error {
 
 			if err != nil {
 				close(s.buffer)
-				logger.Errorf("search body [%v] error: %v", s.body, err)
+				logger.Errorf("search with body [%v] error: %v", s.body, err)
 				return nil
 			}
 
